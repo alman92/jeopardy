@@ -4,18 +4,71 @@ var values = ["$200", "$400", "$600", "$800", "$1000"]
 for(var i = 0; i < categories.length; i++){
   $(".categories").append("<div class='catTitle'>"+categories[i]+"</div>")
   $(".question-container").append("<div class='question-row' id='"+i+"'></div>")
+
   populateNumbers(i)
 }
 
 function populateNumbers(column){
-  console.log(column)
   for(var i = 0; i < values.length; i++){
-    $("#" + column).append("<div class='question'>"+ values[i]+"</div>")
+    $("#" + column).append("<button class='question' difficulty="+i+">"+values[i]+"</button>")
   }
 }
 
+// category = "categories[column]"
+
+$(".question-row").on("click", function(){
+  // $(".question-row").addClass("active")
+})
+//use children
+
+$(".question").on("click", function () {
+  var difficulty = $(this).attr("difficulty");
+  var category = $(this).parent().attr("id");
+  //difficulty
+  // .html
+    // // create element for the question to be shown
+
+    // append that element to the page
+    // prompt the user for an answer
+    // check to see if that user's answer is correct
+      // if it is correct, add dollar to player
+      // otherwise, substract from player
+})
 
 
+
+// how to model our game's data:
+//
+ // questions
+   // each question has:
+    // text
+    // answer
+    // dollarAmount
+
+  var questions = [
+    {
+      category: 0,
+      difficulty: 0,
+      text: "Name the state capitol of Maryland",
+      answer: "Annapolis",
+      dollarAmount: "200"
+    },
+    {
+      text: "Name the state capitol of Rhode Island",
+      answer: "Providence",
+      dollarAmount: "400"
+    }
+  ];
+
+
+  for(var  i = 0; i < questions.length; i++){
+    console.log(questions[i].text);
+  }
+
+
+  for(var  i = 0; i < questions.length; i++){
+    console.log(questions[i].text);
+  }
 
 
 
