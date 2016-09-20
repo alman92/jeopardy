@@ -1,5 +1,6 @@
 var categories = ["World Geography", "Mythology", "Modern American Politics", "DC Comics", "Food", "Media"]
 var values = ["$200", "$400", "$600", "$800", "$1000"]
+var gameScore = $(".score")
 
 for(var i = 0; i < categories.length; i++){
   $(".categories").append("<div class='catTitle'>"+categories[i]+"</div>")
@@ -17,14 +18,29 @@ function populateNumbers(column){
 var questions = {
   col0 : {
     diff0 : {
-      text : "Name the state capital of Maryland",
-      answer : "Annapolis",
-      dollarAmount : "200"
+      text : "The Dutch originally colonized this city and called it New Amsterdam.",
+      answer : "New York City",
+      dollarAmount : 200
     },
     diff1 : {
-      text : "",
-      answer : "",
-      dollarAmount : ""
+      text : "It was along this degree parallel north in which the Korean peninsula was split in the Korean Armistice Agreement.",
+      answer : "38",
+      dollarAmount : 400
+    },
+    diff2 : {
+      text : "This intracontenental city formally known as Constantinople, was the epicenter of the creation of the Modern New Testiment by Constantine, the first Roman Empire to denounce the Roman gods for Christianity.",
+      answer : "Istanbul",
+      dollarAmount : 600
+    },
+    diff3 : {
+      text : "The Golden Sultan of the Mali Kingdom, Mansa Musa, would lead the pilgramage to Mecca from Timbuktu across this desert.",
+      answer : "Sahara",
+      dollarAmount : 800
+    },
+    diff4 : {
+      text : "This Russian peninsula was declaired a military zone by the Soviets after World War II and wasn't opened to the public until 1990.",
+      answer : "Kamchatka",
+      dollarAmount : 1000
     }
   },
   col1 : {
@@ -50,7 +66,7 @@ $(".question").on("click", function () {
   $('.questionCover').show();
   var difficulty = $(this).attr("difficulty");
   var category = $(this).parent().attr("id");
-  var questionText = eval('questions.col'+difficulty+'.diff'+category+'.text');
+  var questionText = eval('questions.col'+category+'.diff'+difficulty+'.text');
   $('.questionCover').append('<p>'+questionText+'</p>');
 })
 
@@ -58,26 +74,29 @@ $(".question").on("click", function () {
   $('.questionCover').show();
   var difficulty = $(this).attr("difficulty");
   var category = $(this).parent().attr("id");
-  answerText = eval('questions.col'+difficulty+'.diff'+category+'.answer');
+  answerText = eval('questions.col'+category+'.diff'+difficulty+'.answer');
   var answer = $('<p>'+answerText+'</p>');
-
   $('.questionCover').append(answer);
   answer.hide();
   $('.questionCover').append('<input>')
   $("input").on("keypress", function(e){
     if(e.keyCode == 13){
       var userInput = $(this).val();
+      var initialScore = gameScore.html()
+      var score = parseInt(initialScore.trim().split(":")[1])
+      var actDollarAmount = eval('questions.col'+category+'.diff'+difficulty+'.dollarAmount');
       if(userInput == answerText) {
-        console.log("hi")
-        alert("+$200")
+        var total = score + actDollarAmount
+        gameScore.html('Score : ' + total)
       }else{
-        alert("-$200")
+        var total = score - actDollarAmount
+        gameScore.html('Score : ' + total)
       }
+  $(".questionCover").empty();
   $(".questionCover").hide();
     }
   })
 })
-
 
 
 // category = "categories[column]"
