@@ -17,7 +17,7 @@ function populateNumbers(column){
 var questions = {
   col0 : {
     diff0 : {
-      text : "Name the state capitol of Maryland",
+      text : "Name the state capital of Maryland",
       answer : "Annapolis",
       dollarAmount : "200"
     },
@@ -73,7 +73,7 @@ $(".question").on("click", function () {
       }else{
         alert("-$200")
       }
-  $(".questionCover").hide();    
+  $(".questionCover").hide();
     }
   })
 })
