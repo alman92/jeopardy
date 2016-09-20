@@ -35,7 +35,7 @@ var questions = {
     },
     diff1 : {
       text : "what is my name",
-      answer : "",
+      answer : "Alex",
       dollarAmount : ""
     }
   }
@@ -60,6 +60,7 @@ $(".question").on("click", function () {
   var category = $(this).parent().attr("id");
   answerText = eval('questions.col'+difficulty+'.diff'+category+'.answer');
   var answer = $('<p>'+answerText+'</p>');
+
   $('.questionCover').append(answer);
   answer.hide();
   $('.questionCover').append('<input>')
@@ -68,7 +69,11 @@ $(".question").on("click", function () {
       var userInput = $(this).val();
       if(userInput == answerText) {
         console.log("hi")
+        alert("+$200")
+      }else{
+        alert("-$200")
       }
+  $(".questionCover").hide();    
     }
   })
 })
