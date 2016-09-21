@@ -219,3 +219,13 @@ $(".question").on("click", function () {
     }
   })
 })
+
+$("#reset").on("mouseover", function (resetButton) {
+  $(this).css("background-color", "red")
+})
+$("#reset").on("mouseout", function (resetButton) {
+  $(this).css("background-color", "none")
+})
+$("#reset").on("click", function () {
+  location.reload()
+})

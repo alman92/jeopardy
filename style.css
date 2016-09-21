@@ -20,6 +20,13 @@ header{
   width: 100%;
 }
 
+#reset{
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 5px;
+  font-family: 'Bree Serif', serif;
+  color: white;
+}
+
 body{
 background-color: #000000;
 padding: 0px;
