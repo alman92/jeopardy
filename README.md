@@ -17,13 +17,11 @@ HTML was used only for structuring content.
 CSS was used for applying all visual styles.
 JavaScript was used for all interactive functionality,
 
-## Contributing
+## Installing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+To install, clone a copy from github repository the username is alman92 the repository is named jeopardy.git
+
+git@github.com:alman92/jeopardy.git
 
 ## History
 
