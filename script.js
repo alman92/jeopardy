@@ -208,10 +208,10 @@ $(".question").on("click", function () {
       var actDollarAmount = eval('questions.col'+category+'.diff'+difficulty+'.dollarAmount');
       if(answerText.includes(userInput.toLowerCase()) || userInput.toLowerCase() == answerText){
         var total = score + actDollarAmount
-        gameScore.html('Score : ' + "$" + total)
+        gameScore.html('Score : ' + total)
       }else{
         var total = score - actDollarAmount
-        gameScore.html('Score : ' + "$" + total)
+        gameScore.html('Score : ' + total)
       }
 
   $(".questionCover").empty();
