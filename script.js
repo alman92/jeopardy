@@ -224,7 +224,7 @@ $("#reset").on("mouseover", function (resetButton) {
   $(this).css("background-color", "red")
 })
 $("#reset").on("mouseout", function (resetButton) {
-  $(this).css("background-color", "none")
+  $(this).css("background-color", "white")
 })
 $("#reset").on("click", function () {
   location.reload()

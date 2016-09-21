@@ -21,10 +21,10 @@ header{
 }
 
 #reset{
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: white;
   border-radius: 5px;
   font-family: 'Bree Serif', serif;
-  color: white;
+  color: black;
 }
 
 body{
