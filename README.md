@@ -2,6 +2,8 @@
 
 Jeopardy is America's favorite trivia game show!! Answer questions right and you receive the monetary value of the question, answer wrong and you lose it.  Make as much money as you can by answering questions correctly before there are no more left!
 
+<!-- NHO: installation instructions?   -->
+
 ## User Stories
 
 * As a player, I want to be able to input the answer in many different cases.
