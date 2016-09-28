@@ -1,42 +1,43 @@
+/* NHO: nice job on the layout!  */
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
 
-*{
+* {
   box-sizing: border-box;
 }
 
-header{
+header {
   color: white;
   font-size: 24px;
   text-align: center;
-  text-shadow: 5px;
+  text-shadow: 5px;  /* NHO: validator is throwing an error http://www.w3schools.com/cssref/css3_pr_text-shadow.asp  */
   height: 100%;
   width: 100%;
   display: flex;
   padding: 10px;
 }
 
-.score{
+.score {
   text-align: center;
   width: 100%;
 }
 
-#reset{
+#reset {
   background-color: white;
   border-radius: 5px;
   font-family: 'Bree Serif', serif;
   color: black;
 }
 
-body{
-background-color: #000000;
-padding: 0px;
-margin: 0px;
-height: 100%;
-width: 100%;
+body {
+  background-color: #000000;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
-.catTitle{
-  display:flex;
+.catTitle {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 16.66%;
@@ -53,17 +54,18 @@ width: 100%;
   text-shadow: 3px 3px black;
 }
 
-.question-row{
+.question-row {
   width: 16.66%;
   float: left;
 }
 
-.question{
+.question {
   width: 100%;
   height: 140%;
   background-color: rgb(0, 0, 255);
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
+  ;
   justify-content: center;
   text-align: center;
   color: white;
@@ -76,6 +78,7 @@ width: 100%;
   cursor: pointer;
   text-shadow: 3px 3px black;
 }
+
 .questionCover {
   display: none;
   width: 100%;
