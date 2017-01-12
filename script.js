@@ -183,7 +183,6 @@ var questions = {
 $(".question").on("click", goToQuestion);
 function goToQuestion() {
   $(this).off("click").addClass("asked");
-  console.log(this);
   $('.questionCover').fadeIn(300);
   var difficulty = $(this).attr("difficulty");
   var category = $(this).parent().attr("id");
